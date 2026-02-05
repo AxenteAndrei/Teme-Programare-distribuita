@@ -3,14 +3,18 @@
 import json, os, shutil, uuid
 from models import Contact
 
+# Directorul unde se afla acest fisier (manager.py)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 
 class ContactManager:
 
-    def __init__(self, data_file: str = "data/contacts.json", photos_dir: str = "photos"):
-        self.data_file, self.photos_dir = data_file, photos_dir
+    def __init__(self, data_file: str = None, photos_dir: str = None):
+        self.data_file = data_file or os.path.join(BASE_DIR, "data", "contacts.json")
+        self.photos_dir = photos_dir or os.path.join(BASE_DIR, "photos")
         self.contacts: list = []
-        os.makedirs(os.path.dirname(data_file), exist_ok=True)
-        os.makedirs(photos_dir, exist_ok=True)
+        os.makedirs(os.path.dirname(self.data_file), exist_ok=True)
+        os.makedirs(self.photos_dir, exist_ok=True)
         self.load_contacts()
 
     # Incarca contactele din fisierul JSON

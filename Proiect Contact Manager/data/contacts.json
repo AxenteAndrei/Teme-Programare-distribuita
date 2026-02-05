@@ -4,6 +4,39 @@
         "surname": "Doee",
         "phone": "3215214",
         "email": "alenxader@gmail.com",
-        "photo": "a5397e9f.png"
+        "photo": "a5397e9f.png",
+        "favorite": false
+    },
+    {
+        "name": "Mihai",
+        "surname": "M",
+        "phone": "075431252",
+        "email": "mihaim@email.com",
+        "photo": "2669b578.png",
+        "favorite": false
+    },
+    {
+        "name": "Ioana",
+        "surname": "",
+        "phone": "0753215",
+        "email": "ioana@email.com",
+        "photo": "e648dddd.png",
+        "favorite": false
+    },
+    {
+        "name": "Favoritul",
+        "surname": "",
+        "phone": "075333333",
+        "email": "favorite@email.com",
+        "photo": "",
+        "favorite": true
+    },
+    {
+        "name": "Petre",
+        "surname": "P",
+        "phone": "075132333",
+        "email": "petrep@email.com",
+        "photo": "",
+        "favorite": true
     }
 ]

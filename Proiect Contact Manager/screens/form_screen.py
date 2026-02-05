@@ -44,12 +44,12 @@ class FormScreen(ctk.CTkFrame):
             fg_color="#777777", hover_color="#888888", corner_radius=6, command=self._remove_photo).pack(side="left", padx=4)
 
         # Campurile formularului
-        self.name_entry = self._create_field(form, "Name *", "e.g. John")
+        self.name_entry = self._create_field(form, "Name *", "")
         self.name_entry.bind("<KeyRelease>", self._update_avatar)
-        self.surname_entry = self._create_field(form, "Surname (optional)", "e.g. Doe")
-        self.phone_entry = self._create_field(form, "Phone *", "e.g. +40 721 234 567")
+        self.surname_entry = self._create_field(form, "Surname (optional)", "")
+        self.phone_entry = self._create_field(form, "Phone *", "")
         self.phone_entry.bind("<KeyRelease>", self._filter_phone)
-        self.email_entry = self._create_field(form, "Email", "e.g. john.doe@email.com")
+        self.email_entry = self._create_field(form, "Email", "")
 
         # Buton salvare
         self.save_btn = ctk.CTkButton(form, text="Save Contact", height=45, font=ctk.CTkFont(size=15, weight="bold"),

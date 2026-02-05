@@ -38,7 +38,7 @@ class ContactCard(ctk.CTkFrame):
         self.phone_label.pack(anchor="w")
         self.text_frame = text_frame
 
-        # Butoanele (ascunse, apar la hover)
+        # Butoanele - Hover
         self.buttons_frame = ctk.CTkFrame(self, fg_color="transparent")
         star = ("\u2605", "#f1c40f") if self.contact.favorite else ("\u2606", "#555577")
         buttons = [(star[0], star[1], "#f39c12", self.on_favorite),
@@ -51,7 +51,7 @@ class ContactCard(ctk.CTkFrame):
             btn.pack(side="left", padx=3)
             self.btn_widgets.append(btn)
 
-        # Leaga evenimentele de hover (mouse pe card)
+        # Legare elemente Hover
         for widget in [self, self.avatar, self.text_frame, self.name_label, self.phone_label, self.buttons_frame] + self.btn_widgets:
             widget.bind("<Enter>", self._on_enter)
             widget.bind("<Leave>", self._on_leave)
@@ -61,14 +61,14 @@ class ContactCard(ctk.CTkFrame):
         return ctk.CTkLabel(self, text=self.contact.get_initials(), width=50, height=50,
             fg_color="#4a4a7e", corner_radius=8, font=ctk.CTkFont(size=20, weight="bold"), text_color="white")
 
-    # Cand mouse-ul intra pe card - arata butoanele
+    # Hover on enter
     def _on_enter(self, event):
         self.configure(fg_color="#3d3d5c")
         if not self.buttons_visible:
             self.buttons_frame.pack(side="right", padx=12, pady=10)
             self.buttons_visible = True
 
-    # Cand mouse-ul iese de pe card - ascunde butoanele
+    # Hide on leave
     def _on_leave(self, event):
         widget = self.winfo_containing(*self.winfo_pointerxy())
         all_widgets = [self, self.avatar, self.text_frame, self.name_label, self.phone_label, self.buttons_frame] + self.btn_widgets

@@ -14,19 +14,19 @@ class MainScreen(ctk.CTkFrame):
 
     # Creeaza interfata ecranului principal
     def _create_ui(self):
-        # Header (sus)
+        # Header 
         header = ctk.CTkFrame(self, height=60, fg_color="#1a1a2e")
         header.pack(fill="x")
         header.pack_propagate(False)
         ctk.CTkLabel(header, text="Contact Manager", font=ctk.CTkFont(size=24, weight="bold"),
                      text_color="white").pack(side="left", padx=20, pady=15)
 
-        # Buton + pentru adaugare contact
+        # Buton de adaugare contact
         ctk.CTkButton(header, text="+", width=40, height=40, font=ctk.CTkFont(size=24, weight="bold"),
             fg_color="#4CAF50", hover_color="#45a049", corner_radius=20, command=self.on_add
         ).pack(side="right", padx=20, pady=10)
 
-        # Lista de contacte (mijloc, scrollabil)
+        # Lista de contacte 
         self.list_frame = ctk.CTkScrollableFrame(self, fg_color="transparent",
             scrollbar_button_color="#3a3a5e", scrollbar_button_hover_color="#4a4a7e")
         self.list_frame.pack(fill="both", expand=True, padx=10, pady=10)
