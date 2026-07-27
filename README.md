@@ -3,9 +3,6 @@
 Solutii la temele de laborator si proiectele realizate in cadrul cursului de
 **Programare Distribuita**, folosind **Python 3.12**.
 
-Repo-ul contine exercitiile pe laboratoare (L1–L9), care acopera progresiv
-bazele limbajului Python, plus un proiect mai amplu cu interfata grafica.
-
 ---
 
 ## Structura
@@ -33,9 +30,6 @@ Aplicatie desktop de gestiune a contactelor, cu interfata grafica
 - Fotografie de profil pentru fiecare contact
 - Salvare automata in `data/contacts.json`
 - Arhitectura pe module: `models.py`, `manager.py`, `screens/`
-
-Detalii si instructiuni de rulare in
-[`Proiect Contact Manager/README.md`](Proiect%20Contact%20Manager/README.md).
 
 ---
 
